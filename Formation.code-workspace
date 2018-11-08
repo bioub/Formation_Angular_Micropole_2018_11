@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "todo-angular"
+		},
+		{
+			"path": "addressbook-angular"
 		}
 	],
 	"settings": {}
