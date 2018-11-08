@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+:host {
+  position: relative;
+  display: block;
+}
+
+.selected {
+  border: 1px solid $color;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.items {
+  @extend .selected;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.items.closed {
+  display: none;
+}
+
+.item:hover {
+  background-color: lightblue;
+}

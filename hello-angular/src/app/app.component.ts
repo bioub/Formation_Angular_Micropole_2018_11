@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: []
+  styles: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello-world';
+  couleurs = ['Bleu', 'Blanc', 'Rouge'];
+  couleurSelect = 'Blanc';
 }

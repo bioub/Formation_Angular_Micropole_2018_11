@@ -1,7 +1,12 @@
 <app-hello prenom="Eric"></app-hello>
+<app-hello [prenom]="'Eric'"></app-hello>
 
 <app-clock></app-clock>
 
 <app-button-increment></app-button-increment>
 
 <app-form-contact></app-form-contact>
+
+<!-- <app-dropdown [items]="couleurs" [selected]="couleurSelect" (selectedChange)="couleurSelect = $event"></app-dropdown> -->
+
+<app-dropdown [items]="couleurs" [(selected)]="couleurSelect"></app-dropdown>

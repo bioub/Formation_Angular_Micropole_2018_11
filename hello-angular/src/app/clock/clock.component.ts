@@ -13,6 +13,8 @@ export class ClockComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
+    // Zone.js relance la détection de changement
+    // après chaque callback async
     this.intervalId = setInterval(() => {
       this.now = new Date();
     }, 1000);
