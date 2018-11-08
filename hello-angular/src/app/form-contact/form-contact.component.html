@@ -1,0 +1,20 @@
+<form>
+  <p>
+    Prénom : <input [value]="contact.prenom" (input)="contact.prenom = $event.target.value">
+  </p>
+  <p>
+    Prénom : <input [value]="contact.prenom" (input)="contact.prenom = inputElt.value" #inputElt>
+  </p>
+  <p>
+    Prénom : <input [ngModel]="contact.prenom" (ngModelChange)="contact.prenom = $event" name="prenom">
+  </p>
+  <p>
+    Prénom : <input [(ngModel)]="contact.prenom" name="prenom2" minlength="10">
+  </p>
+  <p>
+    Vous avez saisi : {{contact.prenom}}
+  </p>
+  <p>
+    <button>+</button>
+  </p>
+</form>
