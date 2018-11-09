@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MenuComponent,
+  ],
   imports: [
-    CommonModule
+    SharedModule,
+    // importé une seule fois ici pour que httpClient soit un singleton
+    HttpClientModule,
+  ],
+  exports: [
+    MenuComponent,
   ]
 })
 export class CoreModule { }

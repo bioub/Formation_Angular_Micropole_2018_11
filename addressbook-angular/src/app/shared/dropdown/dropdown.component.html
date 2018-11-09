@@ -1,0 +1,11 @@
+<div class="selected" (click)="toggle($event)">
+  {{selected}}
+</div>
+<!-- <div class="items" *ngIf="!closed"></div> -->
+<!-- <div class="items" [style.display]="(closed) ? 'none' : 'block'"> -->
+<!-- <div class="items" [ngStyle]="{display: (closed) ? 'none' : 'block'}"> -->
+<!-- <div class="items" [class.closed]="closed"> -->
+<!-- <div class="items" [ngClass]="{closed: closed}"> -->
+<div class="items" [@openClose]="!closed ? 'open' : 'closed'">
+  <div class="item" *ngFor="let item of items" (click)="select(item)">{{item}}</div>
+</div>
